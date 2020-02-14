@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Scratch Implementation of Stochastic Gradient Descent using Python</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>Scratch Implementation of Stochastic Gradient Descent using Python</h3>
+            <span class="subheading">One of the Most used Optimization Algorithm in Classical Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="blog.html">Tech World</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">AboutUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Popular Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Work With Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid">
+      <div class="row">
+        <!--Dont touch below part of code-->
+        <div class = 'col-sm-3'>
+         <div class="shadow p-3 mb-5 bg-light rounded">
+          <div class="text-center">
+            <h4>Latest Articles</h4>
+          </div>
+          <div class="post-preview">
+              <a href="Gradient_Descent.html">
+                <h6 class="post-subtitle">
+                   Scratch Implementation of Gradient Descent using Python
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on Feb 15, 2020</p>
+            </div>
+          <div class="post-preview">
+              <a href="Text_Data_Preprocessing.html">
+                <h6 class="post-subtitle">
+                   Text Data Pre-Processing using Python
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on Feb 14, 2020</p>
+            </div>
+            <div class="post-preview">
+              <a href="laptop_machine_learning.html">
+                <h6 class="post-subtitle">
+                   Which Laptop to Buy for Machine Learning and Deep Learning
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on August 24, 2019</p>
+            </div>
+            <div class="post-preview">
+              <a href="Why_Appear_GATE_CSE.html">
+                <h6 class="post-subtitle">
+                  Why One Should Appear in the GATE Computer Science.
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on August 24, 2019</p>
+            </div>
+          </div>
+      </div>
+      <!--Dont touch above part of code-->
+
+
+      <!--To write post edit the below part of the code-->
+      <div class="col-sm-6">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <h3 class="text-center">Scratch Implementation of Stochastic Gradient Descent using Python</h3>
+          <div class="text-justify">
+            <p>Stochastic Gradient Descent also called SGD is one of the most used classical machine learning optimization algorithms. It is the variation of Gradient Descent. In Gradient Descent, we iterate through entire data to update the weight. When there is a huge amount of dataset to train the model, in that situation Gradient Descent is very expensive in terms of time complexity. 
+            </p><p>So to reduce the time we use a slight variation of Gradient Descent also called SGD. In SGD, we pick up a single data point randomly from the dataset and update the weights based on the decision of that data point only. Following are the steps that we use in SGD:</p>
+            <blockquote class = "blockquote"> 
+            <ol>
+              <li>Randomly Initialize the weights/coefficients for the initial Iteration. These could be a small random value.</li>
+              <li>Initialize Learning Rate, No of Epochs to the algorithm. These are the hyperparameter, so can be tunned using cross-validation.</li>
+              <li>Make the prediction.</li>
+              <li>Calculate the error E.</li>
+              <li>Update the coefficient using the below formula (Choose a Random Point to Claculate the Gradient).</li>
+              <img src="img/sgd.PNG" alt="">
+              <li>Got to step 3 and check if the number of epochs is over or the algorithm has converged.</li>
+            </ol>
+            </blockquote>
+          </p>
+            <h4>Below is the Python Implementation of SGD from Scratch:</h4>
+
+            <p style="margin-top: 0px">Given a data point, old coefficients, etc, this block of code will update the coefficient.</p>
+            <p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/58d239fc9a4226386dc77eb837eb8f30.js"></script></p>
+
+            <p style="margin-top: 0px">This block of code will make the prediction, given some unknow data point with coefficients.</p>
+            <p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/ecccc57d6b40c6010092378539f9530a.js"></script></p>
+
+            <p style="margin-top: 0px">This is the block of code it will take some parameters such as training data, learning rate, number of epochs, the range value r and will return the optimal coefficients. Learning rate, r, number of epochs are hyperparameters.</p>
+
+            <p><script src="https://gist.github.com/kkaran0908/5af830d448d72e6b0f43e6a73e7f9af8.js"></script></p>
+
+            <p style="margin-top: 0px">Finally, after calculating the coefficients we will make the prediction for test data.</p>
+            <script src="https://gist.github.com/kkaran0908/16700318c65c464a296c23453fb22cc9.js"></script>
+
+            <p style="margin-top: 0px"> You can execute the code by just copy-pasting the code in juypter notebook. You just need to provide the X_train, X_test, Number of Epochs, r, Learning Rate. If you are not able to run the code, do let me know in the comment. I will reply within one hour.</p>
+
+            <blockquote>
+              <ol>
+                <li> Download the IRIS Data-Set : <a href="https://www.kaggle.com/c/boston-housing">https://www.kaggle.com/c/boston-housing</a></li>
+                <li>Perform all the above steps on this dataset.</li>
+                <li>After performing the above steps just comment in the comment section and let us know the Root Mean Squared Error of your model.</li>
+              </ol>
+            </blockquote>
+            <li>You can Find out Full Working Code Here : <a href="https://github.com/kkaran0908/Stochastic-Gradient-Descent-From-Scratch">https://github.com/kkaran0908/Stochastic-Gradient-Descent-From-Scratch</a></li>
+            <p>If you are stuck with any of the step, just comment below, we will help you.</p>        
+          </div>  
+
+
+          <!-- facebook share button-->
+          <div style="text-align: center;font-size:20"><div class="fb-share-button" data-href="https://kkaran0908.github.io/Gradient_Descent.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkkaran0908.github.io%2FGradient_Descent.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+          <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+          <script type="IN/Share" data-url="https://kkaran0908.github.io/Gradient_Descent.html"></script>
+        </div>
+        <!--Name of the author-->
+      </div>
+
+
+      <p style="margin-top: 0px">This article is contributed by 
+        <a href="index.html">Karan Kumar Rajput</a>.
+        <a href="blog.html">Click Here </a>To Read More Articles. To work with us, <a href="contact.html">Please fill out the form</a>, we will get back to you soon.</p>
+        <!--Name of the author Over-->
+      </div>
+      <!--To write post edit the above part of the code-->
+
+      <!--Dont touch the code below this-->
+      <!--Right Side Column-->  
+      <div class = 'col-sm-3'>
+        <div class="shadow p-3 mb-5 bg-light rounded">
+          <div class="text-center">
+            <h4>Popular Posts</h4>
+          </div>
+          <div class="post-preview">
+            <a href="laptop_machine_learning.html">
+              <h6 class="post-subtitle">
+               Which Laptop to Buy for Machine Learning and Deep Learning
+             </h6>
+           </a>
+           <p class="post-meta">Posted by
+            <a href="index.html">Karan Kumar Rajput</a>
+          on August 24, 2019</p>
+        </div>
+        <div class="post-preview">
+          <a href="Why_Appear_GATE_CSE.html">
+            <h6 class="post-subtitle">
+              Why One Should Appear in the GATE Computer Science.
+            </h6>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="index.html">Karan Kumar Rajput</a>
+          on August 24, 2019</p>
+        </div>
+      </div>
+    </div>
+    <!--Right side column end-->
+
+
+  </div>
+
+</div>
+<!-- Pager -->
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <div id="disqus_thread"></div>
+        <script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://kkaran0908-github-io-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+</div>
+</div>
+</div>
+</footer>
+
+<!--js for facebook share button-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+<!--script for facebook share button-->
+<script src="js/facebook.js"></script>
+
+
+
+</body>
+
+</html>

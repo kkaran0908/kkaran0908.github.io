@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Which Laptop to Buy for Machine Learning and Deep Learning</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>Text Data Pre-Processing using Python</h3>
+            <span class="subheading">Important Part of Any Natural Language Processing Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tech World</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">AboutUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Popular Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Work With Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid">
+      <div class="row">
+        <!--Dont touch below part of code-->
+        <div class = 'col-sm-3'>
+          <div class="shadow p-3 mb-5 bg-light rounded">
+          <div class="text-center">
+            <h4>Latest Articles</h4>
+          </div>
+          <div class="post-preview">
+              <a href="Gradient_Descent.html">
+                <h6 class="post-subtitle">
+                   Scratch Implementation of Gradient Descent using Python
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on Feb 15, 2020</p>
+            </div>
+          <div class="post-preview">
+              <a href="Text_Data_Preprocessing.html">
+                <h6 class="post-subtitle">
+                   Text Data Pre-Processing using Python
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on Feb 14, 2020</p>
+            </div>
+            <div class="post-preview">
+              <a href="laptop_machine_learning.html">
+                <h6 class="post-subtitle">
+                   Which Laptop to Buy for Machine Learning and Deep Learning
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on August 24, 2019</p>
+            </div>
+            <div class="post-preview">
+              <a href="Why_Appear_GATE_CSE.html">
+                <h6 class="post-subtitle">
+                  Why One Should Appear in the GATE Computer Science.
+                </h6>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="index.html">Karan Kumar Rajput</a>
+              on August 24, 2019</p>
+            </div>
+          </div>
+
+      </div>
+      <!--Dont touch above part of code-->
+
+
+      <!--To write post edit the below part of the code-->
+      <div class="col-sm-6">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <h3 class="text-center">Text Data Pre-Processing using Python</h3>
+          <div class="text-justify">
+            <p>Text Pre-Preprocessing is one of the important steps in making any good natural language processing model. In this post, we are going to talk about some of the essential text Pre-Processing steps that we generally use in almost all the natural language processing task. So at the end of this post, you will learn the following text pre-processing techniques: </p>
+            <blockquote class = "blockquote"> 
+            <ol>
+              <li>Removing the HTML tags from the text data.</li>
+              <li>Remove the URL from the text data.</li>
+              <li>Remove punctuation, special character such as #, ; , "", etc from the dataset</li>
+              <li>Remove Stopwords such as is, am, are, the, etc</li>
+              <li>Changing sort words to full words like don't -> do not.</li>
+            </ol>
+            </blockquote>
+          Here I will not provide any specific laptop/brand, but I will try to provide the details about what configuration’s laptop will be sufficient for machine learning and deep learning tasks.</p>
+            <img class="img-fluid" src="img/laptop.PNG" alt="">
+            <h4>Import All the Required Libraries: :</h4>
+
+            <p style="margin-top: 0px">Here we are importing all the required libraries to preprocess the data.</p>
+            <p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/0a603285f2722240a19d6d418a5619aa.js"></script></p>
+
+            <h4>Removing the URL from the text data:</h4>
+
+            <p style="margin-top: 0px">Most of the time URL is not very much informative in the text-based modeling, so simply removing them will be useful. </p>
+            <p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/4176764b3620357e5e4982d249b512d0.js"></script></p>
+
+            <h4>Removing the HTML tags from the text data:</h4>
+
+            <p style="margin-top: 0px">HTML tags are like a noise in the text data. So by removing the HTML tags from the dataset, we may get good results as compare to without removing them.</p>
+
+            <p><script src="https://gist.github.com/kkaran0908/ebd6aeb1dec950254cee137155ca289e.js"></script>
+              <blockquote>Output: "Machine Learning is a Fun"</blockquote></p>
+            <h4>Remove Punctuation and Special Character:</h4>
+
+            <p style="margin-top: 0px">Punctuation and special symbols generally do not contain much information, so we can remove them from the dataset for the final modeling.</p>
+            <p><script src="https://gist.github.com/kkaran0908/663bc58e1cf7ddcae93f48c5852240bd.js"></script>
+            <blockquote>Output: "Machine learning is fun"</blockquote></p>
+
+            <h4>Remove Stopwords:</h4>
+
+            <p style="margin-top: 0px"> In the below-given code, we have manually provided all the stopwords that we want to remove from our text data. We can change them according to our needs.</p>
+            <p><script src="https://gist.github.com/kkaran0908/5c5fcdcabf816ec2a8a68214dec41954.js"></script>            <blockquote>Output: "Machine Learning Fun, enjoy earn well."</blockquote></p>
+
+            <h4>Changing Short Words to Full Words:</h4>
+
+            <p style="margin-top: 0px">In this step, we will convert words like don't to do not, haven't to have not, etc.</p>
+            <p><script src="https://gist.github.com/kkaran0908/47c2575e77860f3d742c1f380c3f1a83.js"></script></p>
+            <blockquote>Output: "I have not learn machine learning yet."</blockquote>
+
+
+            <h4>All the Steps Combined:</h4>
+
+            <p style="margin-top: 0px">You can copy the below code and define the set of stopwords.  The below method will return the cleaned text in the form of a sentence after applying the above steps to the raw sentence.</p>
+            <p><script src="https://gist.github.com/kkaran0908/fea23ba89bedad09c5dd2d3b60e765eb.js"></script></p>
+            Exercise that you can do:
+            <blockquote>
+              <ol>
+                <li> Download the dataset from Kaggle : <a href="https://www.kaggle.com/taniaj/australian-election-2019-tweets">https://www.kaggle.com/taniaj/australian-election-2019-tweets</a></li>
+                <li>Perform all the above steps on this dataset.</li>
+                <li>After performing the above steps just comment in the comment section and let us know about the analysis.</li>
+              </ol>
+            </blockquote>
+
+            <p>If you are stuck with any of the text pre-processing step, just comment below, we will add that as soon as possible.</p>        
+          </div>  
+
+
+          <!-- facebook share button-->
+          <div style="text-align: center;font-size:20"><div class="fb-share-button" data-href="https://kkaran0908.github.io/Text_Data_Preprocessing.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkkaran0908.github.io%2FText_Data_Preprocessing.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+          <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+          <script type="IN/Share" data-url="https://kkaran0908.github.io/Text_Data_Preprocessing.html"></script>
+        </div>
+        <!--Name of the author-->
+      </div>
+
+
+      <p style="margin-top: 0px">This article is contributed by 
+        <a href="index.html">Karan Kumar Rajput</a>.
+        <a href="blog.html">Click Here </a>To Read More Articles. To work with us, <a href="contact.html">Please fill out the form</a>, we will get back to you soon.</p>
+        <!--Name of the author Over-->
+      </div>
+      <!--To write post edit the above part of the code-->
+
+      <!--Dont touch the code below this-->
+      <!--Right Side Column-->  
+      <div class = 'col-sm-3'>
+        <div class="shadow p-3 mb-5 bg-light rounded">
+          <div class="text-center">
+            <h4>Popular Posts</h4>
+          </div>
+          <div class="post-preview">
+            <a href="laptop_machine_learning.html">
+              <h6 class="post-subtitle">
+               Which Laptop to Buy for Machine Learning and Deep Learning
+             </h6>
+           </a>
+           <p class="post-meta">Posted by
+            <a href="index.html">Karan Kumar Rajput</a>
+          on August 24, 2019</p>
+        </div>
+        <div class="post-preview">
+          <a href="Why_Appear_GATE_CSE.html">
+            <h6 class="post-subtitle">
+              Why One Should Appear in the GATE Computer Science.
+            </h6>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="index.html">Karan Kumar Rajput</a>
+          on August 24, 2019</p>
+        </div>
+      </div>
+    </div>
+    <!--Right side column end-->
+
+
+  </div>
+
+</div>
+<!-- Pager -->
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <div id="disqus_thread"></div>
+        <script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://kkaran0908-github-io-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+</div>
+</div>
+</div>
+</footer>
+
+<!--js for facebook share button-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+<!--script for facebook share button-->
+<script src="js/facebook.js"></script>
+
+
+
+</body>
+
+</html>
